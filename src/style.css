@@ -1,6 +1,6 @@
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #f1f4eb;
+  background-color: #f2f4eb;
 }
 h1 {
   color: #829687;
@@ -20,9 +20,11 @@ li {
   font-weight: 200;
   color: #1e1e19;
 }
-.weatherApp {
+.weatherAppWrapper {
   width: 700px;
   margin: 75px auto;
+}
+.weatherApp {
   padding: 20px;
   border-radius: 10px;
   background-color: #c5d6b0;

@@ -42,6 +42,10 @@ li::first-letter {
   background-color: #c5d6b0;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
 }
+.overview {
+  padding: 0;
+  margin-bottom: 20px;
+}
 .weather-temperature img {
   margin-right: 10px;
   width: 70px;
@@ -59,9 +63,7 @@ li::first-letter {
   font-size: 16px;
   font-weight: 300;
 }
-.location {
-  padding: 0;
-}
+
 .data {
   text-align: right;
 }

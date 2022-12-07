@@ -42,9 +42,10 @@ function displayTemperature(response) {
     response.data.time * 1000
   );
 }
-
+let city = "Aberdeen";
 let key = `d36aa0424f0b7a4te0a504eba4fo6786`;
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=Aberdeen&key=${key}&units=metric`;
+let units = "metric";
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${key}&units=${units}`;
 
 console.log(apiUrl);
 axios.get(apiUrl).then(displayTemperature);

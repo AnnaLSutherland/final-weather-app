@@ -37,8 +37,19 @@
     <div class="container">
       <div class="weatherAppWrapper">
         <div class="weatherApp">
+          <div class="overview">
+            <h1 id="city"></h1>
+            <h2 id="country"></h2>
+            <ul>
+              <li>
+                Last updated:
+                <span id="date"></span>
+              </li>
+              <li id="description"></li>
+            </ul>
+          </div>
           <div class="row">
-            <div class="col-4">
+            <div class="col-6">
               <div class="d-flex weather-temperature">
                 <img
                   src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
@@ -53,18 +64,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-4 location">
-              <h1 id="city"></h1>
-              <h2 id="country"></h2>
-              <ul>
-                <li>
-                  Last updated:
-                  <span id="date"></span>
-                </li>
-                <li id="description"></li>
-              </ul>
-            </div>
-            <div class="col-4">
+
+            <div class="col-6">
               <ul class="data">
                 <li>
                   Wind speed:

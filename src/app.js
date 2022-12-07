@@ -47,5 +47,4 @@ let key = `d36aa0424f0b7a4te0a504eba4fo6786`;
 let units = "metric";
 let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${key}&units=${units}`;
 
-console.log(apiUrl);
 axios.get(apiUrl).then(displayTemperature);

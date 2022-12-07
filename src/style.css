@@ -1,6 +1,6 @@
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #f2f4eb;
+  background-color: #829687;
   font-size: 16px;
 }
 h1 {
@@ -39,7 +39,7 @@ li::first-letter {
   margin-bottom: 10px;
   padding: 20px;
   border-radius: 10px;
-  background-color: #c5d6b0;
+  background-color: #f1f4eb;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
 }
 .overview {

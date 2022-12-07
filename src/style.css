@@ -3,17 +3,17 @@ body {
   background-color: #829687;
   font-size: 16px;
 }
-h1 {
-  color: #829687;
+h1,
+h2 {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 0;
 }
+h1 {
+  color: #829687;
+}
 h2 {
   color: #95ab9a;
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 0;
 }
 ul {
   margin: 0;
@@ -69,4 +69,8 @@ li::first-letter {
 }
 .dataInfo {
   font-weight: 500;
+}
+.links,
+.links:hover {
+  color: #f1f4eb;
 }

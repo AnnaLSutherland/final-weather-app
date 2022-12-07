@@ -28,6 +28,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
 
     <title>Final Weather App</title>
@@ -45,7 +46,7 @@
                   id="icon"
                 />
                 <div>
-                  <strong id="temperature">4</strong
+                  <strong id="current-temperature"></strong
                   ><span class="units"
                     >°C | <a href="#">°F</a></span
                   >
@@ -53,17 +54,30 @@
               </div>
             </div>
             <div class="col-4 location">
-              <h1>Huntly, UK</h1>
+              <h1 id="city"></h1>
+              <h2 id="country"></h2>
               <ul>
                 <li>Monday 13:00</li>
-                <li>Cloudy</li>
+                <li id="description"></li>
               </ul>
             </div>
             <div class="col-4">
               <ul class="data">
-                <li>Precipitation: 10%</li>
-                <li>Humidity: 91%</li>
-                <li>Wind: 8 mph</li>
+                <li>
+                  Wind Speed:
+                  <span
+                    id="wind-speed"
+                    class="dataInfo"
+                  ></span>
+                  mph
+                </li>
+                <li>
+                  Humidity: <span id="humidity"></span>%
+                </li>
+                <li>
+                  Feels like:
+                  <span id="feels-like"></span>°C
+                </li>
               </ul>
             </div>
           </div>

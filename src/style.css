@@ -48,6 +48,9 @@ li {
   font-size: 16px;
   font-weight: 300;
 }
+.location {
+  padding: 0;
+}
 .data {
   text-align: right;
 }

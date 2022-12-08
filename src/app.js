@@ -41,6 +41,15 @@ function displayTemperature(response) {
   dateElement.innerHTML = formatDate(
     response.data.time * 1000
   );
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+  );
+  iconElement.setAttribute(
+    "alt",
+    response.data.condition.description
+  );
 }
 let city = "Aberdeen";
 let key = `d36aa0424f0b7a4te0a504eba4fo6786`;

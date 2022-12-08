@@ -44,7 +44,7 @@ function displayTemperature(response) {
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
-    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+    `icons/${response.data.condition.icon}.svg`
   );
   iconElement.setAttribute(
     "alt",

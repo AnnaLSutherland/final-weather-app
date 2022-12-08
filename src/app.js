@@ -1,3 +1,5 @@
+// Date
+
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let days = [
@@ -20,6 +22,8 @@ function formatDate(timestamp) {
   }
   return `${day}, ${hours}:${minutes}`;
 }
+
+// Current Temperature
 
 function displayTemperature(response) {
   document.querySelector("#current-temperature").innerHTML =
@@ -51,9 +55,22 @@ function displayTemperature(response) {
     response.data.condition.description
   );
 }
-let city = "Aberdeen";
-let key = `d36aa0424f0b7a4te0a504eba4fo6786`;
-let units = "metric";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${key}&units=${units}`;
 
-axios.get(apiUrl).then(displayTemperature);
+function search(city) {
+  let apiKey = `d36aa0424f0b7a4te0a504eba4fo6786`;
+  let units = "metric";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
+
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSearch(event) {
+  event.preventDefault();
+  let searchedCity = document.querySelector("#city-input");
+  search(searchedCity.value);
+}
+
+search("Aberdeen");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSearch);

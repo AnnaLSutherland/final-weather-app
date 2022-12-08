@@ -42,6 +42,9 @@ li::first-letter {
   background-color: #f1f4eb;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
 }
+.searchEngine {
+  margin-bottom: 20px;
+}
 .overview {
   padding: 0;
   margin-bottom: 20px;

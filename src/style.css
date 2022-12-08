@@ -39,6 +39,7 @@ li::first-letter {
   background-color: #829687;
 }
 #city-input {
+  border: none;
   border-radius: 20px;
   color: #f1f4eb;
 }
@@ -54,12 +55,30 @@ li::first-letter {
   padding: 5px 20px;
   color: #f1f4eb;
   background-color: #596a5e;
-  border: none;
+  border: solid 1px #596a5e;
   border-radius: 20px;
   transition: all 200ms ease-in;
 }
 #search-button:hover {
   background-color: #95ab9a;
+  border: solid 1px #95ab9a;
+}
+
+#current-location-button {
+  position: relative;
+  top: 2px;
+  padding: 5px 15px;
+  color: #596a5e;
+  background-color: #f1f4eb;
+  border: solid 1px #596a5e;
+  border-radius: 20px;
+  transition: all 200ms ease-in;
+}
+
+#current-location-button:hover {
+  color: #f1f4eb;
+  background-color: #95ab9a;
+  border: solid 1px #95ab9a;
 }
 .weatherAppWrapper {
   width: 700px;

@@ -3,6 +3,7 @@ body {
   background-color: #829687;
   font-size: 16px;
 }
+
 h1,
 h2 {
   font-size: 16px;
@@ -30,6 +31,35 @@ li {
 }
 li::first-letter {
   text-transform: capitalize;
+}
+.form-control {
+  background-color: #829687;
+}
+.form-control:focus {
+  background-color: #829687;
+}
+#city-input {
+  border-radius: 20px;
+  color: #f1f4eb;
+}
+#city-input::placeholder {
+  color: #c5d6b0;
+}
+#search-button-column {
+  padding: 0;
+}
+#search-button {
+  position: relative;
+  top: 2px;
+  padding: 5px 20px;
+  color: #f1f4eb;
+  background-color: #596a5e;
+  border: none;
+  border-radius: 20px;
+  transition: all 200ms ease-in;
+}
+#search-button:hover {
+  background-color: #95ab9a;
 }
 .weatherAppWrapper {
   width: 700px;

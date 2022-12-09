@@ -32,6 +32,12 @@ li {
 li::first-letter {
   text-transform: capitalize;
 }
+a {
+  color: #95ab9a;
+}
+a:hover {
+  color: #596a5e;
+}
 .form-control {
   background-color: #829687;
 }
@@ -88,7 +94,7 @@ li::first-letter {
   margin-bottom: 10px;
   padding: 20px;
   border-radius: 10px;
-  background-color: #f1f4eb;
+  background-color: #fcfff6;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
 }
 .searchEngine {
@@ -115,7 +121,13 @@ li::first-letter {
   font-size: 16px;
   font-weight: 300;
 }
-
+.weather-temperature .active {
+  color: #596a5e;
+  cursor: default;
+}
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
 .data {
   text-align: right;
 }

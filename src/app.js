@@ -26,8 +26,10 @@ function formatDate(timestamp) {
 // Current Temperature
 
 function displayWeather(response) {
+  celciusTemperature = response.data.temperature.current;
+
   document.querySelector("#current-temperature").innerHTML =
-    Math.round(response.data.temperature.current);
+    Math.round(celciusTemperature);
   document.querySelector(
     "#city"
   ).innerHTML = `${response.data.city},`;
@@ -70,8 +72,6 @@ function handleSearch(event) {
   search(searchedCity.value);
 }
 
-search("Aberdeen");
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSearch);
 
@@ -100,3 +100,42 @@ let locationButton = document.querySelector(
   "#current-location-button"
 );
 locationButton.addEventListener("click", getPosition);
+
+// Convert to Fahrenheit/Celcius
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let fahrenheitTemperature =
+    (celciusTemperature * 9) / 5 + 32;
+  document.querySelector("#current-temperature").innerHTML =
+    Math.round(fahrenheitTemperature);
+  celciusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+}
+
+function displayCelciusTemperature(event) {
+  event.preventDefault();
+  document.querySelector("#current-temperature").innerHTML =
+    Math.round(celciusTemperature);
+  celciusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+}
+
+let celciusTemperature = null;
+
+let fahrenheitLink = document.querySelector(
+  "#fahrenheit-link"
+);
+fahrenheitLink.addEventListener(
+  "click",
+  displayFahrenheitTemperature
+);
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener(
+  "click",
+  displayCelciusTemperature
+);
+
+// Default Search (So the app isn't blank on load)
+
+search("Aberdeen");

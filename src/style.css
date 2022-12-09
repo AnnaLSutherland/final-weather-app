@@ -53,12 +53,13 @@ a:hover {
   color: #c5d6b0;
 }
 #search-button-column {
-  padding: 0;
+  padding-left: 0;
 }
 #search-button {
+  width: 100%;
   position: relative;
   top: 2px;
-  padding: 5px 20px;
+  padding: 5px 0;
   color: #f1f4eb;
   background-color: #596a5e;
   border: solid 1px #596a5e;

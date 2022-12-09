@@ -75,32 +75,6 @@ function handleSearch(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSearch);
 
-// Search current location
-
-function getLocation(position) {
-  let apiEndpoint =
-    "https://api.shecodes.io/weather/v1/current?";
-  let lat = position.coordinates.latitude;
-  let lon = position.coordinates.longitude;
-  let apiKey = `d36aa0424f0b7a4te0a504eba4fo6786`;
-  let units = "metric";
-
-  let apiUrl = `${apiEndpoint}lat=${lat}&lon=-${lon}&key=${apiKey}&units=${units}`;
-  console.log(apiUrl);
-
-  axios.get(apiUrl).then(displayWeather);
-}
-
-function getPosition(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(getLocation);
-}
-
-let locationButton = document.querySelector(
-  "#current-location-button"
-);
-locationButton.addEventListener("click", getPosition);
-
 // Convert to Fahrenheit/Celcius
 
 function displayFahrenheitTemperature(event) {

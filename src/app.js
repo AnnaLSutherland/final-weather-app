@@ -23,6 +23,30 @@ function formatDate(timestamp) {
   return `${day}, ${hours}:${minutes}`;
 }
 
+// Display Forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Tue", "Wed", "Thur", "Fri", "Sat", "Sun"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2 forecast-col">
+      <div class="forecast-date">${day}</div>
+      <img src="icons/snow-day.svg" alt="#" width="50px" />
+      <div class="forecast-temp">
+        <span class="forecast-temp-max">3°C</span>
+        <span class="forecast-temp-min">-1°C</span>
+      </div>
+  </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
+
 // Current Temperature
 
 function displayWeather(response) {
@@ -113,3 +137,5 @@ celciusLink.addEventListener(
 // Default Search (So the app isn't blank on load)
 
 search("Aberdeen");
+
+displayForecast();

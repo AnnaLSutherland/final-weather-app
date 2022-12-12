@@ -87,7 +87,7 @@ a:hover {
 }
 .overview {
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 .weather-temperature img {
   margin-right: 15px;
@@ -124,7 +124,7 @@ a:hover {
   color: #f1f4eb;
 }
 .forecast {
-  margin-top: 20px;
+  margin-top: 25px;
   text-align: center;
 }
 .forecast-col {
@@ -133,16 +133,16 @@ a:hover {
 .forecast-date {
   font-size: 20px;
   font-weight: 300;
-  color: #829687;
+  color: #b1c4a6;
   margin-bottom: 10px;
 }
 .forecast-temp {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   margin-top: 10px;
 }
 .forecast-temp-max {
-  color: #829687;
+  color: #b1c4a6;
 }
 .forecast-temp-min {
   color: #c5d6b0;

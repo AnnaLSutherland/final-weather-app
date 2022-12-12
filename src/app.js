@@ -23,8 +23,10 @@ function formatDate(timestamp) {
   return `${day}, ${hours}:${minutes}`;
 }
 
-// Display Forecast
-function displayForecast() {
+// Forecast Temperature
+
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let days = ["Tue", "Wed", "Thur", "Fri", "Sat", "Sun"];
 
@@ -44,7 +46,13 @@ function displayForecast() {
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
-  console.log(forecastHTML);
+}
+
+function getForecast(city) {
+  let apiKey = `d36aa0424f0b7a4te0a504eba4fo6786`;
+  let units = "metric";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 // Current Temperature
@@ -80,6 +88,7 @@ function displayWeather(response) {
     "alt",
     response.data.condition.description
   );
+  getForecast(response.data.city);
 }
 
 function search(city) {
@@ -137,5 +146,3 @@ celciusLink.addEventListener(
 // Default Search (So the app isn't blank on load)
 
 search("Aberdeen");
-
-displayForecast();

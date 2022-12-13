@@ -56,7 +56,7 @@ function displayForecast(response) {
       )}</div>
       <img src="icons/${
         forecastDay.condition.icon
-      }.svg" alt="#" width="50px" />
+      }.svg" alt="#" width="60px" />
       <div class="forecast-temp">
         <span class="forecast-temp-max">${Math.round(
           forecastDay.temperature.maximum

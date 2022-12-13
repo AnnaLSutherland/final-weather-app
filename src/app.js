@@ -139,16 +139,24 @@ function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let fahrenheitTemperature =
     (celciusTemperature * 9) / 5 + 32;
+
   document.querySelector("#current-temperature").innerHTML =
     Math.round(fahrenheitTemperature);
+  document.querySelector("#feels-like").innerHTML =
+    Math.round(fahrenheitTemperature);
+
   celciusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
 }
 
 function displayCelciusTemperature(event) {
   event.preventDefault();
+
   document.querySelector("#current-temperature").innerHTML =
     Math.round(celciusTemperature);
+  document.querySelector("#feels-like").innerHTML =
+    Math.round(celciusTemperature);
+
   celciusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
 }

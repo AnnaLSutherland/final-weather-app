@@ -18,14 +18,19 @@ function formatDate(timestamp) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+
   if (hours > 12) {
     return `${day}, ${hours - 12}:${minutes}pm`;
   } else {
-    return `${day}, ${hours}:${minutes}am`;
+    if (hours >= 1 && hours < 12) {
+      return `${day}, ${hours}:${minutes}am`;
+    } else {
+      return `${day}, 12:${minutes}am`;
+    }
   }
 }
 
-// Forecast Temperature
+// Forecast Date and Temperature
 
 function formatForecastDate(timestamp) {
   let date = new Date(timestamp * 1000);

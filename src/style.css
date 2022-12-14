@@ -38,6 +38,20 @@ a {
 a:hover {
   color: #596a5e;
 }
+.weatherAppWrapper {
+  width: 600px;
+  margin: 75px auto;
+}
+.weatherApp {
+  margin-bottom: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fcfff6;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+}
+.searchEngine {
+  margin-bottom: 20px;
+}
 .form-control {
   background-color: #829687;
 }
@@ -71,20 +85,6 @@ a:hover {
   border: solid 1px #95ab9a;
 }
 
-.weatherAppWrapper {
-  width: 600px;
-  margin: 75px auto;
-}
-.weatherApp {
-  margin-bottom: 10px;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: #fcfff6;
-  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
-}
-.searchEngine {
-  margin-bottom: 20px;
-}
 .overview {
   padding: 0;
   margin-bottom: 25px;

@@ -20,12 +20,12 @@ function formatDate(timestamp) {
   }
 
   if (hours > 12) {
-    return `${day}, ${hours - 12}:${minutes}pm`;
+    return `${day}, ${hours - 12}:${minutes} pm`;
   } else {
     if (hours >= 1 && hours < 12) {
-      return `${day}, ${hours}:${minutes}am`;
+      return `${day}, ${hours}:${minutes} am`;
     } else {
-      return `${day}, 12:${minutes}am`;
+      return `${day}, 12:${minutes} am`;
     }
   }
 }

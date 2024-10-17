@@ -147,8 +147,6 @@ function displayFahrenheitTemperature(event) {
 
   document.querySelector("#current-temperature").innerHTML =
     Math.round(fahrenheitTemperature);
-  document.querySelector("#feels-like").innerHTML =
-    Math.round(fahrenheitTemperature);
 
   celciusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");

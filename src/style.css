@@ -38,6 +38,9 @@ a {
 a:hover {
   color: #596a5e;
 }
+small {
+  color: #f1f4eb;
+}
 .weatherAppWrapper {
   width: 600px;
   margin: 75px auto;
@@ -125,7 +128,7 @@ a:hover {
 }
 .links,
 .links:hover {
-  color: #f1f4eb;
+  color: #c5d6b0;
 }
 .forecast {
   margin-top: 25px;
